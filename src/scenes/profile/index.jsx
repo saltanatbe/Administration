@@ -28,8 +28,21 @@ const Profile = () => {
       "Address 1": yup.string().required("required"),
       "Address 2": yup.string().required("required"),
     }),
-    onSubmit: (values) => {
+    onSubmit: (values, actions) => {
       alert(JSON.stringify(values, null, 2));
+      actions.setSubmitting(false);
+      actions.resetForm({
+        values: {
+          // the type of `values` inferred to be Blog
+          "First Name": "",
+          "Last Name": "",
+          Email: "",
+          Contact: "",
+          "Address 1": "",
+          "Address 2": "",
+        },
+        // you can also set the other form states here
+      });
     },
   });
 
@@ -63,7 +76,15 @@ const Profile = () => {
                   name={key}
                   error={!!formik.touched[key] && !!formik.errors[key]}
                   helperText={formik.touched[key] && formik.errors[key]}
-                  sx={{ gridColumn: "span 4" }}
+                  sx={{
+                    gridColumn: "span 4",
+                    fontSize: "20px",
+                  }}
+                  InputProps={{
+                    style: {
+                      fontSize: "18px",
+                    },
+                  }}
                 ></TextField>
               );
             })}

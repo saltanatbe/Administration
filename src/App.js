@@ -8,6 +8,12 @@ import Team from "./scenes/team";
 import Contacts from "./scenes/contacts";
 import Invoices from "./scenes/invoices";
 import Profile from "./scenes/profile";
+import Calendar from "./scenes/calendar";
+import Faq from "./scenes/faq";
+import BarChart from "./scenes/BarChart";
+import PieChart from "./scenes/PieChart";
+import LineChart from "./scenes/LineChart";
+import Map from "./scenes/Map";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -28,6 +34,12 @@ function App() {
               <Route path="/contacts" element={<Contacts />} />
               <Route path="/invoices" element={<Invoices />} />
               <Route path="/profile" element={<Profile />} />
+              <Route path="/calendar" element={<Calendar />} />
+              <Route path="/faq" element={<Faq />} />
+              <Route path="/bar" element={<BarChart />} />
+              <Route path="/line" element={<LineChart />} />
+              <Route path="/pie" element={<PieChart />} />
+              <Route path="/map" element={<Map />} />
             </Routes>
           </main>
         </div>
