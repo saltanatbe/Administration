@@ -10,10 +10,10 @@ import Invoices from "./scenes/invoices";
 import Profile from "./scenes/profile";
 import Calendar from "./scenes/calendar";
 import Faq from "./scenes/faq";
-import BarChart from "./scenes/BarChart";
-import PieChart from "./scenes/PieChart";
-import LineChart from "./scenes/LineChart";
-import Map from "./scenes/Map";
+import BarChartPage from "./scenes/BarChartPage";
+import PieChartPage from "./scenes/PieChartPage";
+import LineChartPage from "./scenes/LineChartPage";
+import MapPage from "./scenes/MapPage";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -36,10 +36,10 @@ function App() {
               <Route path="/profile" element={<Profile />} />
               <Route path="/calendar" element={<Calendar />} />
               <Route path="/faq" element={<Faq />} />
-              <Route path="/bar" element={<BarChart />} />
-              <Route path="/line" element={<LineChart />} />
-              <Route path="/pie" element={<PieChart />} />
-              <Route path="/map" element={<Map />} />
+              <Route path="/bar" element={<BarChartPage />} />
+              <Route path="/line" element={<LineChartPage />} />
+              <Route path="/pie" element={<PieChartPage />} />
+              <Route path="/map" element={<MapPage />} />
             </Routes>
           </main>
         </div>
